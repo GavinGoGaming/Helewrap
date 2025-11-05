@@ -133,3 +133,81 @@ div.products {
   font-weight: 200;
   font-size: 2.4rem;
 }
+
+@media screen and (max-width: 600px) {
+  /* layout adjustments */
+  main {
+    height: auto;
+    padding: 18px 12px;
+  }
+
+  /* make product list horizontally scrollable */
+  .products {
+    display: flex;
+    flex-wrap: nowrap;            /* keep cards in a single row */
+    overflow-x: auto;             /* allow horizontal scrolling */
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    padding: 12px;
+    height: auto;
+    min-height: 180px;
+    scroll-snap-type: x mandatory; /* snap cards for better UX */
+  }
+
+  /* nicer scrollbar on WebKit (optional) */
+  .products::-webkit-scrollbar {
+    height: 8px;
+  }
+  .products::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.12);
+    border-radius: 4px;
+  }
+
+  /* cards should not shrink and should snap into view */
+  .product-card {
+    flex: 0 0 70%;           /* take ~70% of viewport width for readable cards */
+    width: 70%;
+    max-width: 280px;
+    height: auto;            /* allow card height to expand naturally on small screens */
+    padding: 14px;
+    scroll-snap-align: center;
+  }
+
+  .product-card img {
+    height: 140px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 12px;
+  }
+
+  /* tweak buy button for mobile */
+  .purchase {
+    font-size: 0.95rem;
+    padding: 8px 12px;
+  }
+
+  /* logo adjustments so it fits on small screens */
+  .logo-split {
+    gap: 10px;
+    padding: 8px;
+  }
+  .logo-split img {
+    max-width: 120px;
+    height: auto;
+    display: block;
+  }
+
+  /* reduce large header fonts */
+  .thinter {
+    font-size: 1.8rem;
+  }
+
+  /* small tweaks to tags/decoration */
+  .product-tag {
+    top: 6px;
+    right: 6px;
+    rotate: 10deg;
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+}

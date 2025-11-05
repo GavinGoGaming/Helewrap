@@ -19,7 +19,7 @@ export default function Home() {
           <span className="product-description">
             The all in one muscle relaxing and pain relief wrap.
           </span>
-          <button className="purchase">$49.99</button>
+          <button className="purchase">$44.99</button>
         </div>
         <div className="product-card disabled">
           <span className="product-tag">FUTURE</span>
@@ -28,7 +28,7 @@ export default function Home() {
           <span className="product-description">
             Muscle relief whenever, wherever, in one immediate bandage.
           </span>
-          <button className="purchase">$49.99</button>
+          <button className="purchase">SOON</button>
         </div>
       </div>
     </>
