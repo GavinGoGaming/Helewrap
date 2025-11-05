@@ -6,15 +6,15 @@ export default function Home() {
     <>
       <main>
         <div className="logo-split">
-          <img src="/brand/Square.png" height={150} />
-          <img src="/brand/Wide Text.png" height={120} />
+          <img src="brand/Square.png" height={150} />
+          <img src="brand/Wide Text.png" height={120} />
         </div>
         <div style={{ height: '40px' }}></div>
         <span className="thinter">The smart way to heal.</span>
       </main>
       <div className="products">
         <div className="product-card">
-          <img src="/image.png" height={200} />
+          <img src="image.png" height={200} />
           <span className="product-name">Helewrap</span>
           <span className="product-description">
             The all in one muscle relaxing and pain relief wrap.
